@@ -1,5 +1,6 @@
 /**
- * Module: 'hello'
+ * File: app.js
+ * Defined: 'hello' module
  * Description: Declaration of the 'hello' module, as well as its routes
  * Dependencies: ui.router
  *
@@ -17,8 +18,8 @@ var hello = angular
         // Home state 
         .state('home', {
             url: '/home',
-            templateUrl: 'partial-home.html',
-            controller: 'MainCtrl'
+            templateUrl: 'home/partial-home.html',
+            controller: 'HomeCtrl'
         })
         
         // About state 
@@ -40,8 +41,5 @@ var hello = angular
                 controller: 'AboutCtrl'
             });
         
-}); // end 'hello' 
+}); // end @module 'hello'
 
-hello.controller('MainCtrl', function ($scope) {
-    $scope.msg = 'This is in the MainCtrl controller!';
-});
