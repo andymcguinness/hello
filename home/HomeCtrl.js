@@ -9,4 +9,4 @@
 
 hello.controller('HomeCtrl', function ($scope) {
     $scope.msg = 'This is in the HomeCtrl controller!';
-});
+}); // end HomeCtrl

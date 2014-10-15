@@ -1,3 +1,12 @@
+/**
+ * File: about/AboutCtrl.js
+ * Defined: 'AboutCtrl' controller
+ * Description: the controller for the /about route
+ * Dependencies: $scope, $http
+ *
+ * @module hello
+ */
+
 hello.controller('AboutCtrl', function ($scope, $http) {
     $scope.msg = 'This is in the AboutCtrl controller!';
 
@@ -18,4 +27,4 @@ hello.controller('AboutCtrl', function ($scope, $http) {
           error(function(data, status, headers, config) {
                 console.log('error');
           });
-});
+}); // end AboutCtrl
