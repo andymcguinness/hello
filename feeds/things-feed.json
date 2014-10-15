@@ -1,0 +1,16 @@
+{
+    "things": [
+        {
+            "name": "Apple",
+            "color": "red"
+        },
+        {
+            "name": "Baseball",
+            "color": "white"
+        },
+        {
+            "name": "Chemicals",
+            "color": "multi"
+        }
+    ]
+}

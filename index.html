@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- ng-app bootstraps Angular -->
+<html ng-app="hello">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Hello">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello</title>
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+        <!-- <link rel="author" href="humans.txt"> -->
+    </head>
+    <body>
+        <h1>Hello!</h1>
+
+        <ul>
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="about">About</a></li>
+        </ul>
+
+        <div ui-view></div>
+
+        <!-- Call the Angular pieces -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+        <!-- Call the app.js file -- our Angular code -->
+        <script src="app.js"></script>
+        <script src="feature-about/AboutCtrl.js"></script>
+    </body>
+</html>
