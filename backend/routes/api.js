@@ -18,6 +18,15 @@ exports.hello = function(req, res) {
     });
 };
 
+// GET /v1/user
+exports.getUsers = function(req, res) {
+    User.find(function(err, users){
+        if (err)
+            res.send(err);
+
+        res.json(users);
+    });
+};
 // POST /v1/user
 exports.addUser = function(req, res) {
     var user = new User();

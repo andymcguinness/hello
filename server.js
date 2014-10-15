@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 8080;
 
 // hook into the db
-mongoose.connect('mongodb://hello:toi5wa5fry2ryik4wa@ds037990.mongolab.com:376990/hello');
+mongoose.connect('mongodb://hello:toi5wa5fry2ryik4wa@ds037990.mongolab.com:37990/hello');
 
 // sets where our stuff is located
 app.use(express.static(__dirname));
@@ -39,6 +39,7 @@ app.get('/', routes.index);
 app.get('/v1/hello', api.hello);
 
 // user routing
+app.get('/v1/users', api.getUsers);
 app.post('/v1/users', api.addUser);     
 
 // should all else fail
