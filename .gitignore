@@ -1,3 +1,6 @@
 # any .swp files -- thanks vim
-
 *.swp
+
+# the node_modules directory -- do that yourself!
+
+/node_modules

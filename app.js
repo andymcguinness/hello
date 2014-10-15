@@ -25,19 +25,19 @@ var hello = angular
         // About state 
         .state('about', {
             url: '/about',
-            templateUrl: 'feature-about/partial-about.html',
+            templateUrl: 'about/partial-about.html',
             controller: 'AboutCtrl'     
         })
             // About nested view 1 -- people
             .state('about.people', {
                 url: '/people',
-                templateUrl: 'feature-about/partial-about-people.html',
+                templateUrl: 'about/partial-about-people.html',
                 controller: 'AboutCtrl'
             })
             // About nested view 2 -- things
             .state('about.things', {
                 url: '/things',
-                templateUrl: 'feature-about/partial-about-things.html',
+                templateUrl: 'about/partial-about-things.html',
                 controller: 'AboutCtrl'
             });
         
