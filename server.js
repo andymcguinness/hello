@@ -9,12 +9,14 @@
 
 /* Base Setup */
 // include required packages
-var express     = require('express');           // rope in express
-var app         = module.exports = express();   // define our app using express
-var bodyParser  = require('body-parser');       // configure app to use body-parser
+var express     = require('express');                   // rope in express
+var app         = module.exports = express();           // define our app using express
+var bodyParser  = require('body-parser');               // configure app to use body-parser
 var routes      = require('./backend/routes');          // include our basic routing
 var api         = require('./backend/routes/api');      // include our api routing
-var http        = require('http');              // for starting the server
+var http        = require('http');                      // for starting the server
+var mongoose    = require('mongoose');                  // hook Mongoose up
+var User        = require('./backend/models/user.js');  // include user model
 
 // allows us to get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,6 +25,9 @@ app.use(bodyParser.json());
 // set our port
 var port = process.env.PORT || 8080;
 
+// hook into the db
+mongoose.connect('mongodb://hello:toi5wa5fry2ryik4wa@ds037990.mongolab.com:376990/hello');
+
 // sets where our stuff is located
 app.use(express.static(__dirname));
 
@@ -30,11 +35,11 @@ app.use(express.static(__dirname));
 // serve up index page
 app.get('/', routes.index);
 
-// serve up partials
-// app.get(':feature/:partial', routes.partials);
-
-// passing along routes for api
+// test api route
 app.get('/v1/hello', api.hello);
+
+// user routing
+app.post('/v1/users', api.addUser);     
 
 // should all else fail
 app.get('*', routes.index);

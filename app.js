@@ -39,7 +39,14 @@ var hello = angular
                 url: '/things',
                 templateUrl: 'about/partial-about-things.html',
                 controller: 'AboutCtrl'
-            });
+            })
+        
+        // User state
+        .state('user', {
+            url: '/user',
+            templateUrl: 'user/partial-user.html',
+            controller: 'UserCtrl'
+        });
         
 }); // end @module 'hello'
 
