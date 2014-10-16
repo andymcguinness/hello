@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 8080;
 
 // hook into the db
-mongoose.connect('mongodb://hello:toi5wa5fry2ryik4wa@ds037990.mongolab.com:37990/hello');
+// this data will be provided to you
 
 // sets where our stuff is located
 app.use(express.static(__dirname));
