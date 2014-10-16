@@ -34,7 +34,7 @@ exports.addUser = function(req, res) {
     user.username = req.body.username,
     user.password = req.body.password;
     
-    user.save(function(err) {
+    user.save(function(err, user) {
         if (err)
             res.send(err);
 

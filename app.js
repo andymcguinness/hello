@@ -74,12 +74,7 @@ var hello = angular
             .state('user.users', {
                 url: '/users',
                 templateUrl: 'user/partial-user-users.html',
-                controller: 'UserCtrl',
-                resolve: {
-                    users: function(ResourceFcty) {
-                        return ResourceFcty('users').get();
-                    }
-                }
+                controller: 'UserCtrl'
             })
             // User nested view 2 -- add a user
             .state('user.new', {
