@@ -15,6 +15,7 @@ hello.controller('UserCtrl', function ($scope, ResourceFcty) {
     $scope.save = function() {
         $scope.user.username = $scope.username;
         $scope.user.password = $scope.password;
-        $scope.user.$save();           
+        $scope.user.$save();
+        $scope.saveMsg = "User submitted!"; 
     };
 }); // end UserCtrl
