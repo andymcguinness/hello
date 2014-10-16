@@ -1,6 +1,9 @@
+<!-- two basic input fields for a username and a password - the ng-model ties it to our scope -->
 <input type="text" placeholder="username" ng-model="username">
 <input type="password" placeholder="password" ng-model="password">
 
+<!-- the save() function defined in our controller -->
 <button ng-click="save()">Submit</button>
 
+<!-- just for UI purposes :) -->
 <p ng-bind="saveMsg"></p>

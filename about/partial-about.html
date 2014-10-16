@@ -1,8 +1,11 @@
 <h2 style="color:red;">About!</h2>
 
+<!-- defined in the controller-->
 <p ng-bind="msg"></p>
 
+<!-- linking to the two nested states -->
 <a ui-sref="about.people">Show People</a>
 <a ui-sref="about.things">Show Things</a>
 
+<!-- each nested state would/will be injected here -->
 <div ui-view></div>

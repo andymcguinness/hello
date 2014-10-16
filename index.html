@@ -6,25 +6,25 @@
         <meta name="description" content="Hello">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hello</title>
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
-        <!-- <link rel="author" href="humans.txt"> -->
     </head>
     <body>
         <h1>Hello!</h1>
 
         <ul>
+            <!-- create links to our three main states -->
             <li><a ui-sref="home">Home</a></li>
             <li><a ui-sref="about">About</a></li>
             <li><a ui-sref="user">User</a></li>
         </ul>
 
+        <!-- where all of the content of the application gets injected -->
         <div ui-view></div>
 
         <!-- Call the Angular pieces -->
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-resource.min.js"></script>
-        <!-- Call the app.js file aka our Angular code -->
+        <!-- Call the app.js file and our Angular code -->
         <script src="app.js"></script>
         <script src="common/ResourceFcty.js"></script>
         <script src="user/UserCtrl.js"></script>

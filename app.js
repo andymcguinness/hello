@@ -5,47 +5,28 @@
  * Dependencies: ui.router, ngResource
  *
  * @module hello
+ * @package hello
  */
 
+// the 'hello' variable will hold a reference to our module -- remember it!
 var hello = angular
-    .module('hello', ['ui.router', 'ngResource'])
-    .config(function($stateProvider, $urlRouterProvider, $controllerProvider, $provide, $compileProvider) {
+    .module('hello', ['ui.router', 'ngResource']) // dependency injection here -- two modules not provided within Angular natively that we are using (included via script tags in index.html)
+    .config(function($stateProvider, $urlRouterProvider, $controllerProvider, $provide, $compileProvider) { // all of these providers are Angular methods
     
-    /* Asynchronous Definitions */
-    hello._controller   = hello.controller;
-    hello._service      = hello.service;
-    hello._factory      = hello.factory;
-    hello._directive    = hello.directive;
-
-    hello.controller    = function(name, constructor) {
-        $controllerProvider.register(name, constructor);
-        return(this);
-    }
-    hello.service       = function(name, constructor) {
-        $provide.service(name, constructor);
-        return(this);
-    }
-    hello.factory       = function(name, factory) {
-        $provide.factory(name, factory);
-        return(this);
-    }
-    hello.directive     = function(name, factory) {
-        $compileProvider.directive(name, factory);
-        return(this);
-    }
-
     /* Begin ui.router */
+    // if the user tries to enter a route that we haven't defined below, they'll be redirected
     $urlRouterProvider.otherwise('/home');
     
+    // here we begin setting the frontend routes
     $stateProvider
-        // Home state 
+        // Home state
         .state('home', {
             url: '/home',
             templateUrl: 'home/partial-home.html',
             controller: 'HomeCtrl'
         })
         
-        // About state 
+        // About state
         .state('about', {
             url: '/about',
             templateUrl: 'about/partial-about.html',

@@ -1,10 +1,13 @@
 <h2>Users!</h2>
 
+<!-- this is set in our controller -->
 <p ng-bind="msg"></p>
 
 <ul>
+    <!-- links to the nested states -->
     <li><a ui-sref="user.users">All Users</a></li>
     <li><a ui-sref="user.new">Add a New User</a></li>
 </ul>
 
+<!-- nested states go here -->
 <div ui-view></div>
