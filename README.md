@@ -30,9 +30,13 @@ Run `npm install` -- this will install all of the project's required dependencie
 
 ### Step 4
 
-Run "node server.js" from the command line -- you should see a message that says "firing on port 8080".
+Take the MongoLab information given to you and put it in the server.js file on line 29.
 
 ### Step 5
+
+Run "node server.js" from the command line -- you should see a message that says "firing on port 8080".
+
+### Step 6
 
 Head on over to localhost:8080 and you should see our shiny new application!
 
